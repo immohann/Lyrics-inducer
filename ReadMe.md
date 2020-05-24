@@ -2,7 +2,7 @@
 # Lyrics-Inducer
 
 An AI model used to generate the lyrics for a set of words given as the input, using LSTM and NLP on Tensorflow framework.
-<div style="text-align:center;">
+<div style="display:block;margin: 0 auto;">
 <image src='res.gif' ></image>
 </div>
 
