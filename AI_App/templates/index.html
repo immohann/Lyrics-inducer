@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Lyrics-Inducer</title>
+</head>
+<style>
+    body, html {
+     margin: 0 0;
+     padding: 0 0;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+
+  color: white;
+  background-image: url('slide2.jpg');
+  background-size: cover;
+} left: 50%;
+
+.bgimg {
+    padding-top: 500px;
+    /* Full-screen */
+    height: 130%;
+    /* Center the background image */
+    background-position: center;
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+    position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: rgb(255, 255, 255);
+    /* Add a font */
+    /* Set the font-size to 25 pixels */
+   
+}
+
+/* Position text in the top-left corner */
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    color: #45a049;
+    font-weight: bold;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    color: #45a049;
+    font-weight: bold;
+}
+
+/* Position text in the middle */
+.middle {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.head {
+    font-size: 40px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: ease-in all 0.2s;
+    text-align: center;
+}
+.form{
+    margin-top: 100px;
+}
+
+#output {
+    width: 750px;
+    height: 100px;
+    font-size: 0.9em;
+    font-weight: bold;
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    border: 3px solid black;
+}
+
+input[type=text] {
+    color: white;
+   background-color:transparent;
+  width: 70%;
+  padding: 15px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-color: transparent;
+  border-bottom-color: orangered;
+  transition-timing-function: ease-in-out;
+  transition: width 2s;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+
+  
+}
+input[type=text] :hover {
+color: peachpuff;
+
+   background-color:transparent;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-color: transparent;
+  border-bottom-color: orangered;
+  transition: all ease-in 0.5s ;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+   
+  width: 70%;
+  background-color: rgb(245, 73, 11, 0.9);
+  color: white;
+  padding: 14px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(245, 73, 11, 1);
+    transition: all ease-in;
+
+}
+
+</style>
+<body style=" background: linear-gradient(to bottom, #000000 0%, #020e44 100%);">
+    <h2 class="head"> LYRICS-INDUCER</h2>
+    <div class="bgimg">
+       
+        <div class="middle">
+            <form action="/predict" method="POST">
+                 <h5>An ML lyrics generator, all you need to do is give head start, word limit and press 'Generate'</h5>
+                 <input type="text" name = "seed_text" class = "control" placeholder = " ex: Chal bombay"> <br>
+                 <input type="text" name = "next_words" class = "control" placeholder = "ex: 50 "> <br>
+                <br>    <br>
+                 <input type="submit" class="btn" value="GENERATE">
+                 
+            </form>
+            <div class="output" style="padding-top: 30px; font-size: 13px;">
+                {{ p }}
+            </div>
+        </div>
+      
+    </div>
+</body>
+</html>
