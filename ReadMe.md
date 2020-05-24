@@ -50,11 +50,11 @@ pip instal flask
 ```
 - clone the repo:
 ```python
-https://github.com/mohanqwerty5/Lyrics-Inducer2.git
+https://github.com/mohanqwerty5/Lyrics-Inducer.git
 ``` 
 - go to the app directoy in terminal:
 ```python
-cd AI_App
+cd Lyrics-Inducer/AI_App
 ```
 - launch the server
 ```python
