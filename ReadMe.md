@@ -64,6 +64,11 @@ cd Lyrics-Inducer/AI_App
 ```python
 python app.py
 ```
+- in the browser run 
+```python
+http://127.0.0.1:5000/
+```
+
 
 
 ###  Conclusion 
